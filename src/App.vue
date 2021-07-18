@@ -1,30 +1,37 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <Nav :logoURL="logoURL" />
   </div>
   <router-view/>
 </template>
 
+<script>
+import Nav from '@/components/Nav.vue'
+import Logo from '@/assets/my_logo.png'
+export default {
+  name: 'App',
+  components: {
+    Nav
+  },
+  data () {
+    return {
+      logoURL: Logo
+    }
+  }
+}
+</script>
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-family: "Coolvetica_b",Helvetica,sans-serif;
+}
+body{
+  background-color: #ffffff;
+  margin:0;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

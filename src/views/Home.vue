@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img
+      :src='logoURL'
+      class="logo"
+      title="Image produced by @WitchStix (instagram)"
+      alt="Light pink ribbon in the shape of a cross, with the name 'Benjamin Sinyard' across from left to right. Computer inbetween the first and last name"
+    >
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Logo from '@/assets/my_logo.png'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
-  }
+  },
+  data () {
+    return {
+      logoURL: Logo
+    }
 }
+};
 </script>
+<style scoped>
+  .logo{
+    max-width: 100%;
+  }
+</style>>

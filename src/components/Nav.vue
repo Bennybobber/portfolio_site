@@ -18,13 +18,13 @@ export default {
     logoURL: String
   },
   methods: {
-    burger: function(event) {
-      var x = document.getElementById("myTopNav");
-    if (x.className === "topNav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topNav";
-  }
+    burger: function (event) {
+      var x = document.getElementById('myTopNav')
+      if (x.className === 'topNav') {
+        x.className += ' responsive'
+      } else {
+        x.className = 'topNav'
+      }
     }
   }
 }
@@ -54,7 +54,6 @@ export default {
 .topNav .icon {
   display: none;
 }
-
 
 @media screen and (max-width: 600px) {
   .topNav a{display:none;}

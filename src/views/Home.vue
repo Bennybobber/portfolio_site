@@ -1,25 +1,18 @@
 <template>
-  <div class="home">
-
-  </div>
   <div class="introduction">
-  <div class="left">
-    <h1> Hello, I'm Beb! I'm a Software Engineer, who loves to do photography in their spare time! </h1>
-    <div class="socials">
-    <a href="https://twitter.com/BeebStreem" ><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }"/> BeebStreem </a> |
-    <a href="https://www.instagram.com/bensinyard/" > <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' }"/> bensinyard </a> |
-    <a href="https://www.linkedin.com/in/benjamin-sinyard-817017178/" > <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/> Benjamin Sinyard </a>
-    </div>
-  </div>
-  <div class="Profileimage">
-    <img
-      :src='profilePic'
-      class="logo"
-      title="Image produced by @WitchStix (instagram)"
-      alt="Light pink ribbon in the shape of a cross, with the name 'Benjamin Sinyard' across from left to right. Computer inbetween the first and last name"
-    >
-
-  </div>
+      <img
+        :src='profilePic'
+        class="logo"
+        title="Profile Image Of Benjamin Sinyard"
+        alt="Round picture of Ben from the neck up, with a small multi-coloured border"
+      >
+      <h1> Hello, I'm Beb! I'm a Software Engineer, who loves to do photography in their spare time! </h1>
+      <div class="socials">
+        <h2> Social Media Contacts: </h2>
+        <a aria-label="Go to Ben's twitter page" href="https://twitter.com/BeebStreem" ><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }"/> BeebStreem </a> |
+        <a aria-label="Go to Ben's instagram page" href="https://www.instagram.com/bensinyard/" > <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' }"/> bensinyard </a> |
+        <a aria-label="Go to Ben's linkedin profile page" href="https://www.linkedin.com/in/benjamin-sinyard-817017178/" > <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/> Benjamin Sinyard </a>
+      </div>
   </div>
 
 </template>
@@ -42,36 +35,55 @@ export default {
 </script>
 <style scoped>
   .logo{
-    display: inline-block;
-    width: 50%;
-    vertical-align: middle;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
 
   }
 
   .introduction{
-    width: 100%;
-    display: flex;
+    display:flex;
+    flex-flow: column;
+    height:100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: lightgray;
+    text-align: center;
+    margin:0 auto;
+    font-size: 18px;
+    word-wrap: break-word;
+    width: 50%;
+  }
+  .introduction img{
+    width: 20%;
   }
   .left{
-    width: 50%;
-    flex: left;
     border-right: solid;
     word-wrap: break-word;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-
   }
   .socials a{
     font-weight: bold;
     text-decoration: none;
     color: inherit;
   }
-  .logoURL{
-    width: 100%;
-    flex: right;
 
+  .socials h2{
+    padding-top: 5%;
+    text-decoration: underline;
   }
+
+  @media screen and (max-width: 600px) {
+  .introduction{
+    width: 100%;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+  .introduction img{
+    width: 50%;
+  }
+}
 </style>>

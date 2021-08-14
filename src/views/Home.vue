@@ -1,4 +1,5 @@
 <template>
+  <div class="main-content"  v-bind:style="{ backgroundImage: 'url(' + backgroundPic + ')' }">
   <div class="introduction">
       <img
         :src='profilePic'
@@ -6,13 +7,14 @@
         title="Profile Image Of Benjamin Sinyard"
         alt="Round picture of Ben from the neck up, with a small multi-coloured border"
       >
-      <h1> Hello, I'm Beb! I'm a Software Engineer, who loves to do photography in their spare time! </h1>
+      <h1> {{ overview }} </h1>
       <div class="socials">
         <h2> Social Media Contacts: </h2>
         <a aria-label="Go to Ben's twitter page" href="https://twitter.com/BeebStreem" ><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }"/> BeebStreem </a> |
         <a aria-label="Go to Ben's instagram page" href="https://www.instagram.com/bensinyard/" > <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' }"/> bensinyard </a> |
         <a aria-label="Go to Ben's linkedin profile page" href="https://www.linkedin.com/in/benjamin-sinyard-817017178/" > <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'linkedin' }"/> Benjamin Sinyard </a>
       </div>
+  </div>
   </div>
 
 </template>
@@ -21,6 +23,7 @@
 // @ is an alias to /src
 import Logo from '@/assets/my_logo.png'
 import profilePic from '@/assets/test.png'
+import background from '@/assets/background.jpg'
 export default {
   name: 'Home',
   components: {
@@ -28,12 +31,22 @@ export default {
   data () {
     return {
       logoURL: Logo,
-      profilePic: profilePic
+      profilePic: profilePic,
+      backgroundPic: background,
+      name: 'Ben',
+      overview: "Hello, I'm Ben! I'm a Software Engineer, who loves to do photography in their spare time!"
     }
   }
 }
 </script>
 <style scoped>
+  .main-content{
+    min-height: 100vh;
+    margin:0 auto;
+    object-fit: fill;
+    background-size:100% 100%;
+    padding-top: 5%;
+  }
   .logo{
     padding: 5px;
     display: flex;
@@ -47,15 +60,17 @@ export default {
   .introduction{
     display:flex;
     flex-flow: column;
-    height:100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: lightgray;
+    padding: 5%;
+    background-color: white;
+    border-radius: 25px;
     text-align: center;
-    margin:0 auto;
     font-size: 18px;
     word-wrap: break-word;
     width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .introduction img{
     width: 20%;
@@ -81,9 +96,15 @@ export default {
     width: 100%;
     font-size: 14px;
     margin-right: 20px;
+    padding: 0px;
+    border-radius: 0px;
   }
   .introduction img{
     width: 50%;
   }
+   .main-content{
+     padding:0;
+     background-size: 0 0;
+   }
 }
 </style>>

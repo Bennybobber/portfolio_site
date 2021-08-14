@@ -36,15 +36,10 @@ export default {
 
 <style scoped>
 #container{
-  position:absolute;
-  bottom:0;
-  flex: bottom;
-  width:100%;
   color:white;
   background-color:#710117;
-  display:flex;
-  flex-direction:column;
   align-items:center;
+  padding-bottom: 1%;
 }
 #contacts{
   display:flex;
@@ -67,5 +62,22 @@ export default {
 
 #mentions p {
   font-size:0.5em;
+}
+
+@media screen and (max-width: 600px) {
+  #contacts{
+    display:inline-block;
+  }
+  #contacts--social{
+    padding: 1%;
+    width: 100%;
+  }
+  #contacts--social a{
+   padding: 10px;
+   margin:0 auto;
+  }
+  #contacts--contact{
+  text-align:center;
+  }
 }
 </style>

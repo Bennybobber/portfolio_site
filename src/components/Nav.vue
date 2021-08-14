@@ -82,7 +82,8 @@ export default {
 }
 
 .topNav a.router-link-exact-active {
-  color: #ecd5bb;
+  color: #789ee9;
+  font-weight: bold;
 }
 .topNav a.router-link-exact-active:hover {
   color: black;

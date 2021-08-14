@@ -1,10 +1,16 @@
 <template>
-  <div id="nav">
-    <Nav :logoURL="logoURL" />
-  </div>
-  <router-view/>
-  <div id="footer">
-    <Footer/>
+  <div id="page-container">
+      <div id="content-wrap">
+    <div id="nav">
+      <Nav :logoURL="logoURL" />
+    </div>
+
+      <router-view/>
+    </div>
+    <div id="footer">
+      <Footer/>
+    </div>
+
   </div>
 
 </template>
@@ -34,13 +40,23 @@ export default {
   text-align: center;
   color: #2c3e50;
   font-family: "Coolvetica_b",Helvetica,sans-serif;
-  margin:0;
-  padding:0;
 }
 body{
-  background-color:lightgrey;
+  background-color:white;
   margin:0;
-  height:100%;
+}
+#content-wrap{
+  padding-bottom: 2.5rem;
+}
+#page-container{
+  position: relative;
+  min-height: 100vh;
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 
 </style>

@@ -66,11 +66,9 @@ export default {
     text-align: center;
     font-size: 18px;
     word-wrap: break-word;
+    position: relative;
     width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
   }
   .introduction img{
     width: 20%;

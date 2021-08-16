@@ -2,7 +2,7 @@
      <div id="container">
     <div id="contacts">
       <div id="contacts--contact">
-        <p>{{ mail }}</p>
+        <p id="email" @click="showEmail()" > Click to view contact email</p>
       </div>
       <div id="contacts--social">
         <div><a :href="twitter" ><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }"/> Twitter </a> </div>
@@ -11,12 +11,13 @@
       </div>
     </div>
     <div id="mentions">
-      <p>{{ mention }}</p>
+      <p> {{ mention }}</p>
     </div>
    </div>
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
   name: 'Footer',
   props: {
@@ -24,11 +25,18 @@ export default {
   },
   data () {
     return {
-      mail: 'Contact Email: benjaminsinyard@gmail.com',
+      email: 'Contact Email: benjaminsinyard@gmail.com',
       mention: '2021 | Benjamin Sinyard',
       twitter: 'https://twitter.com/BeebStreem',
       instagram: 'https://www.instagram.com/bensinyard/',
       linkedin: 'https://www.linkedin.com/in/benjamin-sinyard-817017178/'
+    }
+  },
+  methods: {
+    showEmail: function (event) {
+      // Toggles to show/hide the email from the footer.
+      const currentText = $('#email').text().includes('@')
+      currentText ? $('#email').text('Click to view contact email') : $('#email').text('Contact Email: benjaminsinyard@gmail.com')
     }
   }
 }
@@ -37,9 +45,7 @@ export default {
 <style scoped>
 #container{
   color:white;
-  background-color:#710117;
   align-items:center;
-  padding-bottom: 1%;
 }
 #contacts{
   display:flex;

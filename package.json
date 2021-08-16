@@ -13,6 +13,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "core-js": "^3.6.5",
+    "jquery": "^3.6.0",
+    "jsdom": "^17.0.0",
     "vue": "^3.0.0",
     "vue-cli": "^2.9.6",
     "vue-router": "^4.0.0-0"

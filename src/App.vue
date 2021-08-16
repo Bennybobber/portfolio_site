@@ -41,22 +41,25 @@ export default {
   color: #2c3e50;
   font-family: "Coolvetica_b",Helvetica,sans-serif;
 }
-body{
+body, html{
   background-color:white;
-  margin:0;
+  margin: 0;
+  height: 100%;
 }
 #content-wrap{
-  padding-bottom: 2.5rem;
+  min-height: 100%;
+  height: 100%;
 }
 #page-container{
   position: relative;
   min-height: 100vh;
 }
 #footer{
-  position: absolute;
-  bottom: 0;
+  overflow:hidden;
+  background-color:#710117;
+  height: 100%;
   width: 100%;
-  height: 2.5rem;
+  clear: both;
 }
 
 </style>

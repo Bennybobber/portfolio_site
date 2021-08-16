@@ -18,13 +18,13 @@ export default {
     logoURL: String
   },
   methods: {
-    burger: function(event) {
-      var x = document.getElementById("myTopNav");
-    if (x.className === "topNav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topNav";
-  }
+    burger: function (event) {
+      var x = document.getElementById('myTopNav')
+      if (x.className === 'topNav') {
+        x.className += ' responsive'
+      } else {
+        x.className = 'topNav'
+      }
     }
   }
 }
@@ -55,7 +55,6 @@ export default {
   display: none;
 }
 
-
 @media screen and (max-width: 600px) {
   .topNav a{display:none;}
   .topNav a.router-link-exact-active {
@@ -83,7 +82,8 @@ export default {
 }
 
 .topNav a.router-link-exact-active {
-  color: #ecd5bb;
+  color: #789ee9;
+  font-weight: bold;
 }
 .topNav a.router-link-exact-active:hover {
   color: black;

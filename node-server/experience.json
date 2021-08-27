@@ -1,0 +1,27 @@
+{ "languages": [
+    {
+        "name": "Python",
+        "experience": "8 years",
+        "rating": "10/10",
+        "details": "Python was my first language; I started learning it at secondary school in 2012. I love how versatile and easy to pick up it is. I've used it for many of my school & university projects, and have also used it extensively during my placement year at Egress."
+    },
+    {
+        "name": "C++",
+        "experience": "4 years",
+        "rating": "8/10",
+        "details": "Started in 2017 during university, where I used the language to learn the fundamentals of programming. It's an enjoyable language as there's a lot it can do that other languages, such as Python, can't."
+    },
+    {
+        "name": "C#",
+        "experience": "4 years",
+        "rating": "8/10",
+        "details": "Started in 2017 during university, where I wrote a number of projects in the language. C# is a great language as it's one of the most supported languages currently, and is used in a wide range of applications."
+    },
+    {
+        "name": "java",
+        "experience": "1 year",
+        "rating": "6/10",
+        "details": "In 2017 at university I used java and android studio to make an app that encrypted messages via the mobile's sensors. I had fun with this project, and I'm certain that java has more uses for me to discover."
+    }
+    ]
+}

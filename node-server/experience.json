@@ -22,6 +22,12 @@
         "experience": "1 year",
         "rating": "6/10",
         "details": "In 2017 at university I used java and android studio to make an app that encrypted messages via the mobile's sensors. I had fun with this project, and I'm certain that java has more uses for me to discover."
+    },
+    {
+        "name": "node.js",
+        "experience": "1 year",
+        "rating": "8/10",
+        "details": "Started late 2020, on some web development tutorials using node.js with the express framework. So far I've enjoyed using the language as it's quite easy to pick up and begin to use. I am currently using it for this very websites backend server!"
     }
     ]
 }

@@ -45,7 +45,7 @@ export default {
     margin:0 auto;
     object-fit: fill;
     background-size:100% 100%;
-    padding-top: 5%;
+    padding-top: 10%;
   }
   .logo{
     padding: 5px;

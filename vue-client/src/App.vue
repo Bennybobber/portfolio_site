@@ -56,7 +56,7 @@ body, html{
 }
 #footer{
   overflow:hidden;
-  background-color:#710117;
+  background-color:#000000;
   height: 100%;
   width: 100%;
   clear: both;

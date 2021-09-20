@@ -49,4 +49,8 @@ app.get('/languages', (req, res, next) => {
 
 })
 
+app.get('/photos', (req, res, next) => {
+  return res.send("aaaa")
+})
+
 module.exports = app;

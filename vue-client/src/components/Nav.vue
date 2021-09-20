@@ -2,7 +2,6 @@
     <div class = "topNav" id="myTopNav">
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
-          <router-link to="/contact">Contact Me</router-link>
           <router-link to="/photography">Photography Portfolio</router-link>
           <router-link to="/projects">Project Portfolio</router-link>
           <router-link to="" class="icon">
@@ -33,7 +32,7 @@ export default {
 <style scoped>
 .topNav {
   overflow: hidden;
-  background-color: #710117;
+  background-color: #000000;
 }
 
 .topNav a {

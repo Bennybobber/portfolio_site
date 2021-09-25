@@ -3,6 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const serverLog = require('easy-log')('app:server')
 const cors = require('cors')
+var Flickr = require('flickr-sdk');
 
 const fs = require("fs");
 
@@ -50,7 +51,21 @@ app.get('/languages', (req, res, next) => {
 })
 
 app.get('/photos', (req, res, next) => {
-  return res.send("aaaa")
+  var flickr = new Flickr(process.env.FLICKR_API_KEY);
+  var json = {}
+  return res.send(flickr.photosets.getPhotos({
+    photoset_id: 72157719934206460,
+    user_id: '193996018@N03'
+  }).then(function (res) {
+    console.log('yay!');
+    json = res.body;
+    json = json.photoset.photo
+    return json
+  }).catch(function (err) {
+    console.error('bonk', err);
+  }));
+  console.log(json)
+  return res.send(json)
 })
 
 module.exports = app;

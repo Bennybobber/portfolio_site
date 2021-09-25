@@ -4,18 +4,18 @@
       <div id="introContent">
         <div id="introParagraph">
         <h1>Who Am I?</h1>
+         <img
+          :src='profilePic'
+          id="profilePic"
+          title="Profile Image Of Benjamin Sinyard"
+          alt="Round picture of Ben from the neck up, with a small multi-coloured border"
+        >
         <p>I'm Benjamin Sinyard (He/They), a Software Engineer who's always been interested in electronics.
             it simply started off with taking apart electronics as a child to "investigate" them,
             and then over time it developed into me wanting to understand how they worked... and then
             boom I began to learn to program at around the age of 11.
         </p>
         </div>
-        <img
-          :src='profilePic'
-          id="profilePic"
-          title="Profile Image Of Benjamin Sinyard"
-          alt="Round picture of Ben from the neck up, with a small multi-coloured border"
-        >
       </div>
     </div>
     <div id="tableBlock">
@@ -164,15 +164,15 @@ export default {
 }
 #introContent{
   color: black;
-  text-align: left;
   width: 75%;
   margin: 0 auto;
 }
 #profilePic{
   height: 15%;
   width: 15%;
-  display: inline;
+  display: block;
   border-style: solid;
+  margin: 0 auto;
 }
 
 #tableBlock{
@@ -184,8 +184,6 @@ export default {
 #introParagraph{
   display:inline-block;
   width: 50%;
-  padding-right: 5%;
-  text-align: center;
 }
 #education table{
   width: 50%;

@@ -1,22 +1,3 @@
-const mysql = require('mysql2');
-const fs = require("fs");
-
-
-
-module.exports = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'Known_Languages',
-});
-
-db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'Known_Languages',
-});
-
 
 async function getLanguages(cb){
 

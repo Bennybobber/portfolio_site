@@ -1,0 +1,1 @@
+var Flickr = require('flickr-sdk');

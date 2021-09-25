@@ -143,9 +143,6 @@ export default {
         this.rating = ''
         this.addtional = ''
       }
-      for (const key in this.rowData) {
-        console.log(this.rowData[key].languageName)
-      }
     }
   }
 }
